@@ -8,88 +8,55 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
 
 </head>
-<body>
-    <div class="content">
-    <h2 align="center">Simple Calculator</h2>
-    <!--using input -->
-    <div class="input-group">
-      
-        <input id="num1" type="number" class="form-control" value="" placeholder="Enter the number">
-        <input id="num2" type="number" class="form-control" value=""  placeholder="Enter the number">
-      </div>
-
-  <!--using btn-group-->
-    <div class="btn-group">
-        <button type="button" class="btn btn-success btn-md" onclick="resultadd()">ADDITION</button>
-        
+<body id="result">
+    <p align="center" style="margin-top: 10%; ">Student Result</p>
+    <div class="container">
+        <div class="stu-input">
+            <table border="2">
+                
+                <label >Student ID
+                    <input type="number" id="number" required placeholder="Enter your Id"onclick="backgroundchange()">
+                    
+                </label>
+                <label > Date of Birth
+                    <input type="date" id="date" required>
+                </label> <br>
+                <button class="btn btn-warning" onclick="getmarks()">Get Marks</button>
+                
+            </table>
+        </div>
+    
     </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-success btn-md" onclick="resultsub()">SUBTRACTION</button>
-        
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-success btn-md" onclick="resultdivide()">DIVIDE</button>
-        
-    </div>
-    <div class="btn-group">
-        <button type="button" class="btn btn-success btn-md" onclick="resultmultiply()">MULTIPLY</button>
-        
-    </div>
-   <!--Result-->
-    <div class="cal-result">
-
-        <p id="result">Result:</p>
-       </div>
-    </div>
+ 
+    
     <script>
-        /* values get from input num1 and num2 */
-      var box1 =document.getElementById("num1")
-      var box2 =document.getElementById("num2")
-      /* result*/
-      var result=document.getElementById("result")
-/* for call result*/
-      function resultadd()
-  {
-  var box1value= Number(box1.value)
-  var box2value= Number(box2.value)
-  var total=box1value+box2value
-  result.textContent=(" Result:The Addition is "+total)
-  alert(" The Addition is "+total)
-  
-
-  }
-  function resultsub()
-  {
-  var box1value= Number(box1.value)
-  var box2value= Number(box2.value)
-  var total=box1value-box2value
-  result.textContent=("Result: The Subtraction is "+total)
-  alert("The Subtraction is "+total)
-  
-
-  }
-  function resultdivide()
-  {
-  var box1value= Number(box1.value)
-  var box2value= Number(box2.value)
-  var total=box1value/box2value
-  result.textContent=(" Result:The Division is "+total)
-  alert(" The Division is"+total)
-  
-
-  }
-  function resultmultiply()
-  {
-  var box1value= Number(box1.value)
-  var box2value= Number(box2.value)
-  var total=box1value*box2value
-  result.textContent=("Result:The Multiplication is "+total)
-  alert("The Multiplication is "+total)
-  
-
-  }
-    </script> 
+       
+        function backgroundchange()
+       {
+     
+       
+       document.getElementById('result').style.backgroundColor="#F1DED9";
+       }
+     function getmarks()
+       {
+        
+        var sid=10001;
+        var sname="SUNDAR";
+        var address="Chennai";
+        var m1=67,m2=90,m3=89,m4=88,m5=90;
+        var total=m1+m2+m3+m4+m5;
+        var percentage=(total*100)/500.0;
+        alert('Click ok to View Result') 
+        document.write('Student result'+"<br>")
+       document.write("Student id=:"+sid+"<br>");
+       document.write("Student Name=:"+sname+"<br>");
+       document.write("Address=:"+address+"<br>");
+       document.write("Total=:"+total+"<br>");
+       document.write("percentage=:"+percentage);
+       }
+    </script>
 </body>
 </html>
