@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <span></span>
+
+    <h2>Student Information</h2>
+    <table></table>
+    <label >Student ID
+        <input type="number" required placeholder="Enter ID">
+    </label> <br>
+   
+    <button class="btn btn-primary"  onclick="mymark()" style="margin-left: 10%;margin-top: 10px; ">Get Marks</button> <br> <br>
+    
+    <h3 > <span id="sid"></span></h3>
+    <h3 > <span id="sname"></span></h3>
+    <h3 > <span id="saddress"></span></h3>
+   </div> <br><br>
+   <div class="container">
+  
+        <h4 > <span id="smark1"></span></h4>
+        <h4 > <span id="smark2"></span></h4>
+        <h4 > <span id="smark3"></span></h4>
+        <h4> <span id="smark4"></span></h4>
+        <h4 > <span id="smark5"></span></h4>
+        <h4 > <span id="stotal"></span></h4>
+        <h4 > <span id="spercentage"></span></h4>
+   
+   
+</div>
+    <script>
+        var input1=document.getElementById('sid')
+        var input2=document.getElementById('sname')
+        var input3=document.getElementById('saddress')
+        var m1=document.getElementById('smark1')
+        var m2=document.getElementById('smark2')
+        var m3=document.getElementById('smark3')
+        var m4=document.getElementById('smark4')
+        var m5=document.getElementById('smark5')
+        var input4=document.getElementById('stotal')
+        var stotal=80+78+78+80+95;
+       var input5=document.getElementById('spercentage')
+       var spercentage=(stotal*100)/500.0;
+    function mymark()
+    {
+     input1.textContent=("Student ID:"+10001);
+     input2.textContent=("Name:"+'Sundar')
+     input3.textContent=("Address:"+'Erode')
+     m1.textContent=("Tamil:"+80);
+     m2.textContent=("English:"+78);
+     m3.textContent=("Maths:"+78);
+     m4.textContent=("Science:"+80);
+     m5.textContent=("Social:"+95);
+     input4.textContent=("Total:"+stotal);
+     input5.textContent=("Percentage"+spercentage);
+
+    }
+    </script>
+
+</div>
+</body>
+</html>

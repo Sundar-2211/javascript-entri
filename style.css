@@ -19,3 +19,18 @@ p{
 .stu-input button{
     margin-left: 7rem;
 }
+/*Student information*/
+
+div h3{
+    margin-top: 2rem;
+    display: inline;
+    font-weight: bold;
+    font-size: larger;
+    background-color: #2043a5;
+    color: white;
+    border-radius: 5px ;
+    
+}
+#smark1,#smark2,#smark3,#smark4,#smark5,#stotal,#spercentage {
+    color: brown;
+}
